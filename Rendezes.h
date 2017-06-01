@@ -1,9 +1,5 @@
 #pragma once
-
-#include <iostream>
-
 #include <ctime>
-//#include "Rendezes.cpp"
 
 template <class T>
 class Rendezes {
@@ -175,7 +171,7 @@ int QuickSort<T>::particional(T *a, int bal, int jobb) {
 	T pivot = a[jobb];
 
 	for (int i = bal; i < jobb; i++) {
-		if (a[i] <= pivot) {
+		if (kisebb(a[i], pivot)) {
 			csere(a[i], a[pInd]);
 			pInd++;
 		}
@@ -230,6 +226,4 @@ void QuickSortT<T>::rendez(T *tomb, int n) {
 	kezd();
 	QuickSort<T>::rendez(tomb, n);
 	vege();
-
-
 }
