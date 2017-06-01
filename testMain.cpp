@@ -10,24 +10,18 @@ void main() {
 		t2[i] = 1000 - i;
 	}
 
-	for (int i = 0; i < 1000; i++)
-		cout << t1[i] << ' ';
-	cout << endl;
-
 	//Rendezes<int>* r[] = { new BuborekosRendezesT<int>, new QuickSortT<int> };
-	Rendezes<int>* r = new BuborekosRendezes<int>;
-	r->rendez(t1, 1000);
-	cout << "Buborekos rendezes:" << endl;
-	cout << "===================" << endl;
 
+	Rendezes<int>* r[] = { new QuickSort<int> };
+	r[0]->rendez(t1, 1000);
 	for (int i = 0; i < 1000; i++)
 		cout << t1[i] << ' ';
 	cout << endl;
 
-	//cout << "Osszehasonlitasok szama: " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getHasonlit() << endl;
-	//cout << "Cserek szama: " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getCsere() << endl;
-	//cout << "Ido (ms): " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getIdo() << endl;
-	cout << endl;
+	/*cout << "Osszehasonlitasok szama: " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getHasonlit() << endl;
+	cout << "Cserek szama: " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getCsere() << endl;
+	cout << "Ido (ms): " << (dynamic_cast<BuborekosRendezesT<int>*>(r[0]))->getIdo() << endl;
+	cout << endl;*/
 	/*cout << "QuickSort:" << endl;
 	cout << "==========" << endl;
 	r[1]->rendez(t2, 1000);
