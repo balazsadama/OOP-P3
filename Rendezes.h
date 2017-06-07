@@ -38,8 +38,7 @@ void Stat::kezd() {
 }
 
 void Stat::vege() {
-	ido = clock() - c;
-	ido = (int)(((double)ido) * 1000 / CLOCKS_PER_SEC) + 1;
+	ido = (int)(((double)(clock() - c)) * 1000 / CLOCKS_PER_SEC) + 1;
 }
 
 unsigned int Stat::getIdo() {
